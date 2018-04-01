@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>{{{title}}}</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<link rel="icon" href="/media/favicon.ico" type="image/gif" sizes="16x16">
+
+{{!-- link stylesheets --}}	
+	<link rel="stylesheet" href="/css/header.css">
+	<link rel="stylesheet" href="/css/footer.css">
+	<link rel="stylesheet" href="/css/home.css">
+	<link rel="stylesheet" href="/css/reset.css">
+	<link rel="stylesheet" href="/css/koloezdene.css">
+	
+	
+
+{{!-- link fonts --}}
+	<link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Russo+One" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Alegreya+Sans+SC" rel="stylesheet">
+	
+
+</head>
+<body>
+	{{!-- <script>document.body.className += ' fade-out';</script> --}}
+	
+	{{>header}}
+
+	{{{body}}}
+
+	{{>footer}}
+
+	<script src="/script/navbar.js"></script>
+	<script src="/script/events.js"></script>
+	
+	
+</body>
+</html>

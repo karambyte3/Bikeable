@@ -1,0 +1,16 @@
+{
+  "name": "bikeable",
+  "version": "1.0.0",
+  "description": "Website about biking",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Stefan Kalenderov",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "express": "^4.16.2",
+    "express-handlebars": "^3.0.0"
+  }
+}
