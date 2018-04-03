@@ -11,6 +11,7 @@ for (var i = 0; i < elems.length; i += 1) {
 
 $(document).ready(function () {
 	$("#toggleMenu").click(function () {
-		$("li").toggleClass("nav-responsive");
-	});
+		$("li").toggleClass("nav-responsive")
+	})
+
 });

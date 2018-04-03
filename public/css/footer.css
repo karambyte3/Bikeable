@@ -4,7 +4,8 @@
 	width: 100%;
 	position: relative;
 	height: auto;
-	background-color: #444;
+	background-color: rgb(80, 80, 80);
+	transition: 1s;
 }
 
 .footer .col {
@@ -38,7 +39,7 @@
 }
 
 .footer .col ul li a{
-	color: rgb(109, 109, 109);
+	color: rgb(133, 133, 133);
 	font-size: 14px;
 	/* font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; */
 	font-family: 'Alegreya', sans-serif;
@@ -78,6 +79,11 @@
 	letter-spacing: 0.5px;
 }
 
+.footer:hover {
+	background-color: #444;
+	transition: 1s;	
+}
+
 .footer .col ul li a:hover {
 	color: #ffffff;
 	transition: 0.5s;
@@ -100,16 +106,6 @@
 	.contain {
 		width: 1200px;
 		margin: 0 auto;
-	}
-}
-
-@media only screen and (max-width: 1139px) {
-	.contain .social {
-		width: 1000px;
-		display: block;
-	}
-	.social h1 {
-		margin: 0;
 	}
 }
 
