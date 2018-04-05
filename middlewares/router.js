@@ -5,8 +5,8 @@ router.get('/', (req, res) => {
 	res.render('home', {title: 'Home'})
 })
 
-router.get('/koloezdene', (req, res) => {
-	res.render('koloezdene', {title: 'Колоездене'})
+router.get('/cycling', (req, res) => {
+	res.render('cycling', {title: 'Колоездене'})
 })
 
 router.get('/articles', (req, res) => {
@@ -21,9 +21,20 @@ router.get('/about', (req, res) => {
 	res.render('about', {title: 'About'})
 })
 
+router.get('/cycling/yt', (req, res) => {
+	res.render('./cycling/yt.hbs', {
+		title: 'yt'
+	})
+})
+
+
+
+
+
 router.use(function (req, res) {
-	res.render("404", { title: "Page not found", pageUrl: req.url })
+	res.render("404", { title: "Page not found"})
 	res.status(404);
 })
+
 
 module.exports = router

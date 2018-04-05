@@ -10,8 +10,13 @@ const app = express()
 var con = mysql.createConnection(config.database)
 
 con.connect((err) => {
-	if (err) throw err
-	console.log("Connected to database!")
+	if (err) {
+		console.log("==========Database connection error.==========")
+		throw err
+	} else {
+		console.log("Connected to database!")
+	}
+	
 });
 
 // Set app middlewares
@@ -28,9 +33,15 @@ app.set('view engine', 'hbs')
 app.use('/', router)
 
 
+
 app.listen(config.port, (err) => {
 	if (err) {
 		console.log('Server error', err)
 	}
 	console.log('Server running on port ' + config.port + '. Press CTRL+C to destroy...')
 })
+
+module.exports = {
+	app: app,
+	con: con
+}

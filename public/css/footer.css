@@ -6,6 +6,8 @@
 	height: auto;
 	background-color: rgb(80, 80, 80);
 	transition: 1s;
+	user-select: none;
+	-ms-user-select: none;
 }
 
 .footer .col {
@@ -29,7 +31,8 @@
 	font-weight: bold;
 	text-transform: uppercase;
 	letter-spacing: 0.250em;
-	
+	cursor: default;
+	user-select: none;
 }
 
 .footer .col ul {
@@ -41,9 +44,7 @@
 .footer .col ul li a{
 	color: rgb(133, 133, 133);
 	font-size: 14px;
-	/* font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; */
 	font-family: 'Alegreya', sans-serif;
-	/* font-weight: bolder; */
 	padding: 5px 0 5px 0;
 	cursor: pointer;
 	transition: 0.5s;

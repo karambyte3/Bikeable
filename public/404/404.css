@@ -58,10 +58,6 @@
 	box-shadow: 0 0 10px black;
 }
 
-.footer-about p{
-	width: 10px;
-}
-
 @media screen and (max-width: 650px) {
 	.container404-background {
 	background-image: url("/404/404background-responsive.jpg");

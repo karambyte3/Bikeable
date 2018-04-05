@@ -1,0 +1,45 @@
+#main {
+    padding: 25px 0;
+}
+
+#main h1 {
+    color: rgb(68, 68, 68);
+	font-size: 30px;
+	border-bottom: solid rgb(140, 255, 251);
+	border-width: 2px;
+	width: 90%;
+	display: inline-block;
+	padding-bottom: 3%;
+	font-family: 'Oswald', sans-serif;
+	font-weight: bolder;
+}
+
+#main p {
+    font-family: 'Alegreya Sans SC', sans-serif, bolder;
+	font-weight: bold;
+	font-size: 18px;
+	width: 80%;
+	margin-top: 20px;
+	display: inline-block;
+	text-align: center;
+	color: #444;
+	letter-spacing: 1px;
+}
+
+#content p {
+    padding: 5px 10px;
+}
+
+#content iframe {
+    width: 100%;
+    padding: 20px 0;
+}
+
+#content {
+	padding-bottom: 25px;
+	font-size: 18px;
+}
+
+#article-container {
+    transition: 0.8s;
+}

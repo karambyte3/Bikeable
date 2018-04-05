@@ -4,6 +4,7 @@
 
 .nav {
 	transition: all 0.5s;
+	width: 100%;
 }
 
 .nav ul {
