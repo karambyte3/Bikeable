@@ -7,17 +7,10 @@ const mysql = require('mysql')
 
 const app = express()
 
-var con = mysql.createConnection(config.database)
+// Controllers
+const articlesController = require('./controllers/articlesController.js')
 
-con.connect((err) => {
-	if (err) {
-		console.log("==========Database connection error.==========")
-		throw err
-	} else {
-		console.log("Connected to database!")
-	}
-	
-});
+var con = mysql.createConnection(config.database)
 
 // Set app middlewares
 app.use(express.static('public'))
@@ -32,7 +25,18 @@ app.set('view engine', 'hbs')
 
 app.use('/', router)
 
+var q = con.query("SELECT content FROM `cycling` WHERE id = 1", function (err, result, fields) {
+        if (err) throw err;
+    })
 
+app.get('/q', (req, res) => {
+	res.render(q)
+})
+
+con.query("SELECT * FROM cycling", function (err, result, fields) {
+        if (err) throw err;
+        console.log(result);
+    })
 
 app.listen(config.port, (err) => {
 	if (err) {
@@ -43,5 +47,4 @@ app.listen(config.port, (err) => {
 
 module.exports = {
 	app: app,
-	con: con
 }
