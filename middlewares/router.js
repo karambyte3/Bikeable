@@ -1,5 +1,6 @@
 const express = require('express')
 const router = express.Router()
+const db = require('../controllers/dbController.js')
 
 router.get('/', (req, res) => {
 	res.render('home', {title: 'Home'})
@@ -19,6 +20,10 @@ router.get('/bikes', (req, res) => {
 
 router.get('/about', (req, res) => {
 	res.render('about', {title: 'About'})
+})
+
+router.get('/yt', (req, res) => {
+	res.render('article', {content: db.renderArticle()})
 })
 
 router.get('/cycling/yt', (req, res) => {

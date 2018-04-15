@@ -4,13 +4,12 @@ const bodyParser = require("body-parser")
 const router = require('./middlewares/router.js')
 const hbs = require('express-handlebars')
 const mysql = require('mysql')
+const db = require('./controllers/dbController.js')
 
 const app = express()
 
 // Controllers
 const articlesController = require('./controllers/articlesController.js')
-
-var con = mysql.createConnection(config.database)
 
 // Set app middlewares
 app.use(express.static('public'))
@@ -25,18 +24,7 @@ app.set('view engine', 'hbs')
 
 app.use('/', router)
 
-var q = con.query("SELECT content FROM `cycling` WHERE id = 1", function (err, result, fields) {
-        if (err) throw err;
-    })
-
-app.get('/q', (req, res) => {
-	res.render(q)
-})
-
-con.query("SELECT * FROM cycling", function (err, result, fields) {
-        if (err) throw err;
-        console.log(result);
-    })
+// db.renderArticle()
 
 app.listen(config.port, (err) => {
 	if (err) {
