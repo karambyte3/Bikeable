@@ -12,7 +12,10 @@ con.connect(function (err) {
 var renderArticle = () => {
     con.query("SELECT content FROM cycling WHERE id = 1", function (err, result, fields) {
         if (err) throw err;
-        return result
+        var content = result[0].content
+        return content
+
+        // console.log(content)
     })
 }
 
