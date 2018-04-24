@@ -14,8 +14,7 @@ var renderArticle = () => {
         if (err) throw err;
         var content = result[0].content
         return content
-
-        // console.log(content)
+        console.log(content)
     })
 }
 
