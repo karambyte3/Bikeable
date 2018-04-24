@@ -22,8 +22,10 @@ router.get('/about', (req, res) => {
 	res.render('about', {title: 'About'})
 })
 
+let htmlBody = db.renderArticle()
+
 router.get('/yt', (req, res) => {
-	res.render('article')
+	res.render('article', {content: htmlBody})
 })
 
 router.get('/cycling/yt', (req, res) => {

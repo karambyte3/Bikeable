@@ -13,8 +13,9 @@ var renderArticle = () => {
     con.query("SELECT content FROM cycling WHERE id = 1", function (err, result, fields) {
         if (err) throw err;
         var content = result[0].content
+        // console.log(content)
+        
         return content
-        console.log(content)
     })
 }
 
