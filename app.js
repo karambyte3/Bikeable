@@ -24,7 +24,7 @@ app.set('view engine', 'hbs')
 
 app.use('/', router)
 
-db.renderArticle()
+// db.renderArticle()
 
 app.listen(config.port, (err) => {
 	if (err) {

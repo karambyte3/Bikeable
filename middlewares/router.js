@@ -3,29 +3,41 @@ const router = express.Router()
 const db = require('../controllers/dbController.js')
 
 router.get('/', (req, res) => {
-	res.render('home', {title: 'Home'})
+	res.render('home', {
+		title: 'Home'
+	})
 })
 
 router.get('/cycling', (req, res) => {
-	res.render('cycling', {title: 'Колоездене'})
+	res.render('cycling', {
+		title: 'Колоездене'
+	})
 })
 
 router.get('/articles', (req, res) => {
-	res.render('articles', {title: 'Статии'})
+	res.render('articles', {
+		title: 'Статии'
+	})
 })
 
 router.get('/bikes', (req, res) => {
-	res.render('./bikes/main.hbs', {title: 'Байкове'})
+	res.render('./bikes/main.hbs', {
+		title: 'Байкове'
+	})
 })
 
 router.get('/about', (req, res) => {
-	res.render('about', {title: 'About'})
+	res.render('about', {
+		title: 'About'
+	})
 })
 
-let htmlBody = db.renderArticle()
-
 router.get('/yt', (req, res) => {
-	res.render('article', {content: htmlBody})
+	db.renderArticle((htmlBody) => {
+		res.render('article', {
+			content: htmlBody
+		})
+	})
 })
 
 router.get('/cycling/yt', (req, res) => {
@@ -35,11 +47,10 @@ router.get('/cycling/yt', (req, res) => {
 })
 
 
-
-
-
 router.use(function (req, res) {
-	res.render("404", { title: "Page not found"})
+	res.render("404", {
+		title: "Page not found"
+	})
 	res.status(404);
 })
 

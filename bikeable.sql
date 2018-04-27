@@ -25,6 +25,7 @@ SET time_zone = "+00:00";
 --
 -- Table structure for table `cycling`
 --
+CREATE DATABASE `bikeable`;
 
 CREATE TABLE `cycling` (
   `id` int(11) NOT NULL,

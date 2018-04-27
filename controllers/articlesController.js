@@ -3,8 +3,3 @@
 // const mysql = require('mysql')
 // const con = db.con
 
-
-
-// module.exports = {
-//     renderArticle
-// }
