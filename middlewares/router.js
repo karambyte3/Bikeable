@@ -33,9 +33,12 @@ router.get('/about', (req, res) => {
 })
 
 router.get('/yt', (req, res) => {
-	db.renderArticle((htmlBody) => {
-		res.render('article', {
-			content: htmlBody
+	db.renderArticle((content) => {
+		db.articleTitle((articleName) => {
+			res.render('article', {
+				content: content,
+				title: articleName
+			})
 		})
 	})
 })
