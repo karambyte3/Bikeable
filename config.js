@@ -6,6 +6,7 @@ module.exports = {
 		host: "localhost",
 		user: 'root',
 		password: '',
-		database: 'bikeable'
+		database: 'bikeable',
+		multipleStatements: true
 	}
 }

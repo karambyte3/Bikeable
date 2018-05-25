@@ -8,9 +8,6 @@ const db = require('./controllers/dbController.js')
 
 const app = express()
 
-// Controllers
-const articlesController = require('./controllers/articlesController.js')
-
 // Set app middlewares
 app.use(express.static('public'))
 app.use(bodyParser.urlencoded({ extended: true }))
