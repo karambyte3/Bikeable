@@ -1,6 +1,7 @@
 const express = require('express')
 const router = express.Router()
 const db = require('../controllers/dbController.js')
+const url = require('../urls/koloezdene.js')
 
 router.get('/', (req, res) => {
 	res.render('home', {
