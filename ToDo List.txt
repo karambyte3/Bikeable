@@ -1,0 +1,25 @@
++ middleware za otdelnite statii i razdeli (da preprashta kum url).
+middlewares
+-----koloezdeneUrls.js
+-----statiiUrls.js
+-----bikesUrls.js
+
++ papka za vseki razdel, da sadurja vsichki statii podredeni i svurzani s middleware.
+articles
+-----koloezdene
+--------------downhillArticle.hbs
+-----statii
+--------------polezniSavetiStatiq.hbs
+-----bikes
+--------------scottGamblerNextGen.hbs
+
++ vruzkata s baza danni shte ostane, za po-natam. Za sega shte trqbva da napravq 
+vsichki statii i da gi load-va direktno ot failovete, ne e dobra praktika, no po natam shte izmislq 
+kak da napravq taka che da load-va statiite i stranicite direktno ot 
+database bez nujdata da tursi faila i da go zarejda.
+
+FUTURE PLAN 
+
++ Da se napravi taka che nqkoi kato cukne na buton da go preprashta v statiq.
++ Sled kato cukne na butona da prashta query s url-to kum db i ot tam s url 
+da nameri content-a i title-a i da gi rend-ne na klienta bez nujdata da zarejda fail i da zarejda mnogo vreme.

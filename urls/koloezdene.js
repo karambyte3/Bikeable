@@ -2,19 +2,13 @@ module.exports = {
     yt : {
         title: "SELECT name FROM cycling WHERE id = 1",
         content: "SELECT content FROM cycling WHERE id = 1",
-        getUrl : function() {
-            return this.url
-        }
+        url: "/yt"
     },
+
+    test : {
+        title: "SELECT name FROM cycling WHERE id = 2",
+        content: "SELECT content FROM cycling WHERE id = 2",
+        url: "/test"
+    }
     
 }
-
-// obj = {
-//     fname : "stefcho",
-//     lname : "kalenderov",
-//     fullname : function() { 
-//         console.log(this.fname + " " + this.lname)
-//     }
-// }
-
-// obj.fullname()
