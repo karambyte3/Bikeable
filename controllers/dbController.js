@@ -21,6 +21,25 @@ con.query('CREATE DATABASE IF NOT EXISTS bikeable', function (err) {
     if (err) throw err;
 });
 
+// // Load page title from database
+// let articleTitle = (callback) => {
+//     con.query("SELECT name FROM cycling WHERE id = 1", function (err, result) {
+//         if (err) throw err
+//         let articleName = result[0].name
+//         callback(articleName)
+//     })
+// }
+
+// // Load page content from database
+// let renderContent = (callback) => {
+//     con.query("SELECT content FROM cycling WHERE id = 1", function (err, result) {
+//         if (err) throw err;
+//         let content = result[0].content
+//         callback(content)
+//     })
+// }
+
+
 // Load page title from database
 let articleTitle = (callback) => {
     con.query(yt.title, function (err, result) {
@@ -38,6 +57,9 @@ let renderContent = (callback) => {
         callback(content)
     })
 }
+
+
+
 
 con.on('error', function (err) {
     console.log("[mysql error]", err);

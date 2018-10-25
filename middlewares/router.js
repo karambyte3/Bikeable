@@ -33,22 +33,52 @@ router.get('/about', (req, res) => {
 	})
 })
 
-router.get('/yt', (req, res) => {
-	db.renderContent((content) => {
-		db.articleTitle((articleName) => {
-			res.render('article', {
-				content: content,
-				title: articleName
-			})
-		})
+// router.get('/yt', (req, res) => {
+// 	db.renderContent((content) => {
+// 		db.articleTitle((articleName) => {
+// 			res.render('article', {
+// 				content: content,
+// 				title: articleName
+// 			})
+// 		})
+// 	})
+// })
+
+// router.get('/cycling/yt', (req, res) => {
+// 	res.render('./cycling/yt.hbs', {
+// 		title: 'yt'
+// 	})
+// })
+
+router.get('/cycling/downhill', (req, res) => {
+	res.render('./cycling/downhill.hbs', {
+		title: 'Спускане (downhill) DH'
 	})
 })
 
-router.get('/cycling/yt', (req, res) => {
-	res.render('./cycling/yt.hbs', {
-		title: 'yt'
+router.get('/cycling/cross-country-xc', (req, res) => {
+	res.render('./cycling/cross-country.hbs', {
+		title: 'Крос-кънтри (cross-country) - XC'
 	})
 })
+
+router.get('/cycling/freeride', (req, res) => {
+	res.render('./cycling/freeride.hbs', {
+		title: 'Фрийрайд (freeride) FR'
+	})
+})
+
+router.get('/cycling/dirt-jump', (req, res) => {
+	res.render('./cycling/dirt-jump.hbs', {
+		title: 'Dirt Jump - DJ'
+	})
+})
+
+
+
+
+
+
 
 
 router.use(function (req, res) {

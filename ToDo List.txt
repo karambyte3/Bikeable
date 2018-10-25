@@ -1,8 +1,9 @@
-+ middleware za otdelnite statii i razdeli (da preprashta kum url).
-middlewares
------koloezdeneUrls.js
------statiiUrls.js
------bikesUrls.js
+#+ middleware za otdelnite statii i razdeli (da preprashta kum url).
+#middlewares
+#-----koloezdeneUrls.js
+#-----statiiUrls.js
+#-----bikesUrls.js
+#
 
 + papka za vseki razdel, da sadurja vsichki statii podredeni i svurzani s middleware.
 articles
