@@ -9,11 +9,11 @@
   "author": "Stefan Kalenderov",
   "license": "ISC",
   "dependencies": {
-    "body-parser": "^1.18.2",
-    "express": "^4.16.2",
+    "body-parser": "^1.18.3",
+    "express": "^4.16.4",
     "express-handlebars": "^3.0.0",
     "g": "^2.0.1",
-    "mysql": "^2.15.0",
-    "nodemon": "^1.18.3"
+    "mysql": "^2.16.0",
+    "nodemon": "^1.18.6"
   }
 }

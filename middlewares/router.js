@@ -21,6 +21,23 @@ router.get('/articles', (req, res) => {
 	})
 })
 
+// показване на страницата със статии
+router.get('/article/:id', (req, res, next) => {	
+	let articleId = req.params.id
+	db.getArticle(articleId, (err, article) => {
+		if (!err) {
+			res.render('article', {
+				title: article.title,
+				author: article.author,
+				content: article.content
+			})
+		} else {
+			next() //търси други GET url-и които съвпадат и не намира нищо ==> показва страничката за 404
+		}
+	})
+	
+})
+
 router.get('/bikes', (req, res) => {
 	res.render('./bikes/main.hbs', {
 		title: 'Байкове'

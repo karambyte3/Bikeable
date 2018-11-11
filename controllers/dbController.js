@@ -21,25 +21,6 @@ con.query('CREATE DATABASE IF NOT EXISTS bikeable', function (err) {
     if (err) throw err;
 });
 
-// // Load page title from database
-// let articleTitle = (callback) => {
-//     con.query("SELECT name FROM cycling WHERE id = 1", function (err, result) {
-//         if (err) throw err
-//         let articleName = result[0].name
-//         callback(articleName)
-//     })
-// }
-
-// // Load page content from database
-// let renderContent = (callback) => {
-//     con.query("SELECT content FROM cycling WHERE id = 1", function (err, result) {
-//         if (err) throw err;
-//         let content = result[0].content
-//         callback(content)
-//     })
-// }
-
-
 // Load page title from database
 let articleTitle = (callback) => {
     con.query(yt.title, function (err, result) {
@@ -49,7 +30,7 @@ let articleTitle = (callback) => {
     })
 }
 
-// Load page content from database
+// Load page content from databaseþ
 let renderContent = (callback) => {
     con.query(yt.content, function (err, result) {
         if (err) throw err;
@@ -58,8 +39,17 @@ let renderContent = (callback) => {
     })
 }
 
-
-
+//Взимане на статия чрез ID от базата
+let getArticle = ((articleId, callback) => {
+    con.query("SELECT articles.*, authors.name as author FROM articles INNER JOIN authors ON articles.author_id = authors.id WHERE articles.id = " + articleId, (err, article) => {
+        if (!!err || !article.length) {
+            console.log(err);
+            callback(true, [])
+        } else {
+            callback(false, article[0])
+        }
+    })
+})
 
 con.on('error', function (err) {
     console.log("[mysql error]", err);
@@ -69,4 +59,5 @@ module.exports = {
     con,
     renderContent,
     articleTitle,
+    getArticle
 }

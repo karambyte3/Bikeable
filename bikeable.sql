@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 11, 2018 at 07:37 PM
+-- Generation Time: Nov 11, 2018 at 09:48 PM
 -- Server version: 10.1.28-MariaDB
 -- PHP Version: 7.1.11
 
@@ -30,18 +30,19 @@ SET time_zone = "+00:00";
 
 CREATE TABLE `articles` (
   `id` int(11) NOT NULL,
-  `name` varchar(128) COLLATE utf8_bin NOT NULL,
+  `title` varchar(128) COLLATE utf8_bin NOT NULL,
   `content` text COLLATE utf8_bin NOT NULL,
   `image` varchar(128) COLLATE utf8_bin NOT NULL,
-  `author` int(11) NOT NULL
+  `author_id` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 
 --
 -- Dumping data for table `articles`
 --
 
-INSERT INTO `articles` (`id`, `name`, `content`, `image`, `author`) VALUES
-(1, 'Test братлето ми wee', '<h1>Lorem ipsum dolor sit amet consectetuer adipiscing \r\nelit</h1>\r\n<p>Lorem ipsum dolor sit amet, consectetuer adipiscing \r\nelit. Aenean commodo ligula eget dolor. Aenean massa \r\n<strong>strong</strong>. Cum sociis natoque penatibus \r\net magnis dis parturient montes, nascetur ridiculus \r\nmus. Donec quam felis, ultricies nec, pellentesque \r\neu, pretium quis, sem. Nulla consequat massa quis \r\nenim. Donec pede justo, fringilla vel, aliquet nec, \r\nvulputate eget, arcu. In enim justo, rhoncus ut, \r\nimperdiet a, venenatis vitae, justo. Nullam dictum \r\nfelis eu pede <a class=\"external ext\" href=\"#\">link</a> \r\nmollis pretium. Integer tincidunt. Cras dapibus. \r\nVivamus elementum semper nisi. Aenean vulputate \r\neleifend tellus. Aenean leo ligula, porttitor eu, \r\nconsequat vitae, eleifend ac, enim. Aliquam lorem ante, \r\ndapibus in, viverra quis, feugiat a, tellus. Phasellus \r\nviverra nulla ut metus varius laoreet. Quisque rutrum. \r\nAenean imperdiet. Etiam ultricies nisi vel augue. \r\nCurabitur ullamcorper ultricies nisi.</p>\r\n<h1>Lorem ipsum dolor sit amet consectetuer adipiscing \r\nelit</h1>\r\n<h2>Aenean commodo ligula eget dolor aenean massa</h2>\r\n<p>Lorem ipsum dolor sit amet, consectetuer adipiscing \r\nelit. Aenean commodo ligula eget dolor. Aenean massa. \r\nCum sociis natoque penatibus et magnis dis parturient \r\nmontes, nascetur ridiculus mus. Donec quam felis, \r\nultricies nec, pellentesque eu, pretium quis, sem.</p>\r\n<h2>Aenean commodo ligula eget dolor aenean massa</h2>\r\n<p>Lorem ipsum dolor sit amet, consectetuer adipiscing \r\nelit. Aenean commodo ligula eget dolor. Aenean massa. \r\nCum sociis natoque penatibus et magnis dis parturient \r\nmontes, nascetur ridiculus mus. Donec quam felis, \r\nultricies nec, pellentesque eu, pretium quis, sem.</p>\r\n<ul>\r\n  <li>Lorem ipsum dolor sit amet consectetuer.</li>\r\n  <li>Aenean commodo ligula eget dolor.</li>\r\n  <li>Aenean massa cum sociis natoque penatibus.</li>\r\n</ul>\r\n<p>Lorem ipsum dolor sit amet, consectetuer adipiscing \r\nelit. Aenean commodo ligula eget dolor. Aenean massa. \r\nCum sociis natoque penatibus et magnis dis parturient \r\nmontes, nascetur ridiculus mus. Donec quam felis, \r\nultricies nec, pellentesque eu, pretium quis, sem.</p>\r\n<form action=\"#\" method=\"post\">\r\n  <fieldset>\r\n    <label for=\"name\">Name:</label>\r\n    <input type=\"text\" id=\"name\" placeholder=\"Enter your \r\nfull name\" />\r\n\r\n    <label for=\"email\">Email:</label>\r\n    <input type=\"email\" id=\"email\" placeholder=\"Enter \r\nyour email address\" />\r\n\r\n    <label for=\"message\">Message:</label>\r\n    <textarea id=\"message\" placeholder=\"What\'s on your \r\nmind?\"></textarea>\r\n\r\n    <input type=\"submit\" value=\"Send message\" />\r\n\r\n  </fieldset>\r\n</form>\r\n<p>Lorem ipsum dolor sit amet, consectetuer adipiscing \r\nelit. Aenean commodo ligula eget dolor. Aenean massa. \r\nCum sociis natoque penatibus et magnis dis parturient \r\nmontes, nascetur ridiculus mus. Donec quam felis, \r\nultricies nec, pellentesque eu, pretium quis, sem.</p>\r\n<table class=\"data\">\r\n  <tr>\r\n    <th>Entry Header 1</th>\r\n    <th>Entry Header 2</th>\r\n    <th>Entry Header 3</th>\r\n    <th>Entry Header 4</th>\r\n  </tr>\r\n  <tr>\r\n    <td>Entry First Line 1</td>\r\n    <td>Entry First Line 2</td>\r\n    <td>Entry First Line 3</td>\r\n    <td>Entry First Line 4</td>\r\n  </tr>\r\n  <tr>\r\n    <td>Entry Line 1</td>\r\n    <td>Entry Line 2</td>\r\n    <td>Entry Line 3</td>\r\n    <td>Entry Line 4</td>\r\n  </tr>\r\n  <tr>\r\n    <td>Entry Last Line 1</td>\r\n    <td>Entry Last Line 2</td>\r\n    <td>Entry Last Line 3</td>\r\n    <td>Entry Last Line 4</td>\r\n  </tr>\r\n</table>\r\n<p>Lorem ipsum dolor sit amet, consectetuer adipiscing \r\nelit. Aenean commodo ligula eget dolor. Aenean massa. \r\nCum sociis natoque penatibus et magnis dis parturient \r\nmontes, nascetur ridiculus mus. Donec quam felis, \r\nultricies nec, pellentesque eu, pretium quis, sem.</p>', 'test.jpg', 1);
+INSERT INTO `articles` (`id`, `title`, `content`, `image`, `author_id`) VALUES
+(1, 'Test братлето ми wee', '<h1>Lorem ipsum dolor sit amet consectetuer adipiscing \r\nelit</h1>\r\n<p>Lorem ipsum dolor sit amet, consectetuer adipiscing \r\nelit. Aenean commodo ligula eget dolor. Aenean massa \r\n<strong>strong</strong>. Cum sociis natoque penatibus \r\net magnis dis parturient montes, nascetur ridiculus \r\nmus. Donec quam felis, ultricies nec, pellentesque \r\neu, pretium quis, sem. Nulla consequat massa quis \r\nenim. Donec pede justo, fringilla vel, aliquet nec, \r\nvulputate eget, arcu. In enim justo, rhoncus ut, \r\nimperdiet a, venenatis vitae, justo. Nullam dictum \r\nfelis eu pede <a class=\"external ext\" href=\"#\">link</a> \r\nmollis pretium. Integer tincidunt. Cras dapibus. \r\nVivamus elementum semper nisi. Aenean vulputate \r\neleifend tellus. Aenean leo ligula, porttitor eu, \r\nconsequat vitae, eleifend ac, enim. Aliquam lorem ante, \r\ndapibus in, viverra quis, feugiat a, tellus. Phasellus \r\nviverra nulla ut metus varius laoreet. Quisque rutrum. \r\nAenean imperdiet. Etiam ultricies nisi vel augue. \r\nCurabitur ullamcorper ultricies nisi.</p>\r\n<h1>Lorem ipsum dolor sit amet consectetuer adipiscing \r\nelit</h1>\r\n<h2>Aenean commodo ligula eget dolor aenean massa</h2>\r\n<p>Lorem ipsum dolor sit amet, consectetuer adipiscing \r\nelit. Aenean commodo ligula eget dolor. Aenean massa. \r\nCum sociis natoque penatibus et magnis dis parturient \r\nmontes, nascetur ridiculus mus. Donec quam felis, \r\nultricies nec, pellentesque eu, pretium quis, sem.</p>\r\n<h2>Aenean commodo ligula eget dolor aenean massa</h2>\r\n<p>Lorem ipsum dolor sit amet, consectetuer adipiscing \r\nelit. Aenean commodo ligula eget dolor. Aenean massa. \r\nCum sociis natoque penatibus et magnis dis parturient \r\nmontes, nascetur ridiculus mus. Donec quam felis, \r\nultricies nec, pellentesque eu, pretium quis, sem.</p>\r\n<ul>\r\n  <li>Lorem ipsum dolor sit amet consectetuer.</li>\r\n  <li>Aenean commodo ligula eget dolor.</li>\r\n  <li>Aenean massa cum sociis natoque penatibus.</li>\r\n</ul>\r\n<p>Lorem ipsum dolor sit amet, consectetuer adipiscing \r\nelit. Aenean commodo ligula eget dolor. Aenean massa. \r\nCum sociis natoque penatibus et magnis dis parturient \r\nmontes, nascetur ridiculus mus. Donec quam felis, \r\nultricies nec, pellentesque eu, pretium quis, sem.</p>\r\n<form action=\"#\" method=\"post\">\r\n  <fieldset>\r\n    <label for=\"name\">Name:</label>\r\n    <input type=\"text\" id=\"name\" placeholder=\"Enter your \r\nfull name\" />\r\n\r\n    <label for=\"email\">Email:</label>\r\n    <input type=\"email\" id=\"email\" placeholder=\"Enter \r\nyour email address\" />\r\n\r\n    <label for=\"message\">Message:</label>\r\n    <textarea id=\"message\" placeholder=\"What\'s on your \r\nmind?\"></textarea>\r\n\r\n    <input type=\"submit\" value=\"Send message\" />\r\n\r\n  </fieldset>\r\n</form>\r\n<p>Lorem ipsum dolor sit amet, consectetuer adipiscing \r\nelit. Aenean commodo ligula eget dolor. Aenean massa. \r\nCum sociis natoque penatibus et magnis dis parturient \r\nmontes, nascetur ridiculus mus. Donec quam felis, \r\nultricies nec, pellentesque eu, pretium quis, sem.</p>\r\n<table class=\"data\">\r\n  <tr>\r\n    <th>Entry Header 1</th>\r\n    <th>Entry Header 2</th>\r\n    <th>Entry Header 3</th>\r\n    <th>Entry Header 4</th>\r\n  </tr>\r\n  <tr>\r\n    <td>Entry First Line 1</td>\r\n    <td>Entry First Line 2</td>\r\n    <td>Entry First Line 3</td>\r\n    <td>Entry First Line 4</td>\r\n  </tr>\r\n  <tr>\r\n    <td>Entry Line 1</td>\r\n    <td>Entry Line 2</td>\r\n    <td>Entry Line 3</td>\r\n    <td>Entry Line 4</td>\r\n  </tr>\r\n  <tr>\r\n    <td>Entry Last Line 1</td>\r\n    <td>Entry Last Line 2</td>\r\n    <td>Entry Last Line 3</td>\r\n    <td>Entry Last Line 4</td>\r\n  </tr>\r\n</table>\r\n<p>Lorem ipsum dolor sit amet, consectetuer adipiscing \r\nelit. Aenean commodo ligula eget dolor. Aenean massa. \r\nCum sociis natoque penatibus et magnis dis parturient \r\nmontes, nascetur ridiculus mus. Donec quam felis, \r\nultricies nec, pellentesque eu, pretium quis, sem.</p>', 'test.jpg', 1),
+(2, 'vtori Post веее', '<div class=\"bullet\">\r\n            <div class=\"description\">\r\n              Handlebars templates look like regular HTML, with embedded\r\n              handlebars expressions.\r\n            </div>\r\n            <pre class=\"sunburst\"><span class=\"MetaTagAll\"><span class=\"MetaTagAll\">&lt;</span><span class=\"MetaTagAll\">div</span> <span class=\"MetaTagAll\">class</span>=<span class=\"String\"><span class=\"String\">\"</span>entry<span class=\"String\">\"</span></span><span class=\"MetaTagAll\">&gt;</span></span>\r\n  <span class=\"MetaTagAll\"><span class=\"MetaTagAll\">&lt;</span><span class=\"MetaTagAll\">h1</span><span class=\"MetaTagAll\">&gt;</span></span><span class=\"EmbeddedSourceBright\">{{title}}</span><span class=\"MetaTagAll\"><span class=\"MetaTagAll\">&lt;/</span><span class=\"MetaTagAll\">h1</span><span class=\"MetaTagAll\">&gt;</span></span>\r\n  <span class=\"MetaTagAll\"><span class=\"MetaTagAll\">&lt;</span><span class=\"MetaTagAll\">div</span> <span class=\"MetaTagAll\">class</span>=<span class=\"String\"><span class=\"String\">\"</span>body<span class=\"String\">\"</span></span><span class=\"MetaTagAll\">&gt;</span></span>\r\n    <span class=\"EmbeddedSourceBright\">{{body}}</span>\r\n  <span class=\"MetaTagAll\"><span class=\"MetaTagAll\">&lt;/</span><span class=\"MetaTagAll\">div</span><span class=\"MetaTagAll\">&gt;</span></span>\r\n<span class=\"MetaTagAll\"><span class=\"MetaTagAll\">&lt;/</span><span class=\"MetaTagAll\">div</span><span class=\"MetaTagAll\">&gt;</span></span>\r\n</pre>\r\n            <div class=\"notes\">\r\n              A handlebars expression is a <code>{{</code>, some contents,\r\n              followed by a <code>}}</code>\r\n            </div>\r\n            <a class=\"more-info\" href=\"expressions.html\">Learn More: Expressions</a>\r\n          </div>', 'hhhh.png', 1);
 
 -- --------------------------------------------------------
 
@@ -90,7 +91,7 @@ INSERT INTO `cycling` (`id`, `name`, `content`, `time_created`) VALUES
 --
 ALTER TABLE `articles`
   ADD PRIMARY KEY (`id`),
-  ADD KEY `author` (`author`);
+  ADD KEY `author_id` (`author_id`) USING BTREE;
 
 --
 -- Indexes for table `authors`
@@ -112,7 +113,7 @@ ALTER TABLE `cycling`
 -- AUTO_INCREMENT for table `articles`
 --
 ALTER TABLE `articles`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `authors`
@@ -134,7 +135,7 @@ ALTER TABLE `cycling`
 -- Constraints for table `articles`
 --
 ALTER TABLE `articles`
-  ADD CONSTRAINT `articles_ibfk_1` FOREIGN KEY (`author`) REFERENCES `authors` (`id`);
+  ADD CONSTRAINT `articles_ibfk_1` FOREIGN KEY (`author_id`) REFERENCES `authors` (`id`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
