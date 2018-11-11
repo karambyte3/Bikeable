@@ -16,8 +16,11 @@ router.get('/cycling', (req, res) => {
 })
 
 router.get('/articles', (req, res) => {
-	res.render('articles', {
-		title: 'Статии'
+	db.getAllArticles((articles) => {
+		res.render('articles', {
+			title: 'Статии',
+			articles
+		})
 	})
 })
 

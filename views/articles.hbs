@@ -1,1 +1,11 @@
 <p style="font-size: 30px;">Статии</p>
+<br>
+
+{{#each articles}}
+<a href="/article/{{id}}">
+	<b>{{title}}</b>
+</a> - {{author}} 
+<br>
+<br>
+{{/each}}
+<br>
